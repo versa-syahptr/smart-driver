@@ -1,0 +1,5 @@
+.vscode
+__pycache__
+.handler-saves/*
+.env
+*.task
