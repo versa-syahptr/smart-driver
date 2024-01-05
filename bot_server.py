@@ -171,7 +171,7 @@ bot.remove_webhook()
 if PRODUCTION_ENV:
     print("set webhook")
     time.sleep(0.1)
-    bot.set_webhook(url="https://versa.my.id/sdp/bot")
+    bot.set_webhook(url="https://sdp.versa.my.id/bot")
 
 
 if __name__ == '__main__':
