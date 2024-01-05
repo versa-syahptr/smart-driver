@@ -3,3 +3,5 @@ __pycache__
 .handler-saves/*
 .env
 *.task
+venv
+project
