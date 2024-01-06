@@ -165,13 +165,22 @@ def bot_handler():
     abort(403)
 
 
+@app.route('/set-webhook', methods=['GET']) 
+def set_webhook():
+    url = request.args.get('url')
+    status = bot.set_webhook(url=url)
+    return {'url': url, 'status': status}
+
+
 
 # set webhook
-bot.remove_webhook()
-if PRODUCTION_ENV:
-    print("set webhook")
-    time.sleep(0.1)
-    bot.set_webhook(url="https://sdp.versa.my.id/bot")
+
+# if PRODUCTION_ENV:
+#     print("set webhook")
+#     time.sleep(1)
+#     bot.set_webhook(url="https://versa.my.id/sdp-bot")
+# else:
+#     bot.remove_webhook()
 
 
 if __name__ == '__main__':
