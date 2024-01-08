@@ -79,7 +79,9 @@ def new_device():
 def get_device():
     obj_id = request.args.get('id')
     docu = db.devices.find_one({"_id": ObjectId(obj_id)})
-    return jsonify(str(docu))
+    if not docu:
+        abort(404)
+    return {"details": docu["details"], "plate": docu["plate_number"]}
 
 @app.route('/broadcast', methods=['POST'])
 def broadcast():
