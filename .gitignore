@@ -1,0 +1,16 @@
+.vscode
+__pycache__
+.handler-saves/*
+.env
+*.task
+venv
+project
+audio
+*.wav
+*.mp3
+ssl
+*.html
+*.php
+*.jpg
+*.pdf
+*.ipynb
